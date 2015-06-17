@@ -31,6 +31,9 @@ class UF(models.Model):
 
     def __str__(self):
         return self.nome
+        
+    class Meta:
+        ordering = ('nome', )
 
 
 @python_2_unicode_compatible
@@ -50,3 +53,6 @@ class Municipio(models.Model):
 
     def __str__(self):
         return '%s - %s' % (self.nome, self.uf_sigla)
+
+    class Meta:
+        ordering = ('nome', )
